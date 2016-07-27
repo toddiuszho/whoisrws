@@ -1,1 +1,1 @@
-curl -qs -H'Accept: application/json' 'https://whois.arin.net/rest/nets;q=208.18.95.98' | ruby parse.rb
+curl -qs -H'Accept: application/json' 'https://whois.arin.net/rest/nets;q=208.18.95.98'
