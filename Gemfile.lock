@@ -1,8 +1,23 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.4.0)
     ast (2.3.0)
+    domain_name (0.5.20160615)
+      unf (>= 0.0.5, < 1.0.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    http (1.0.4)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 1.0.1)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    http-form_data (1.0.1)
+    http_parser.rb (0.6.0)
     json (1.8.3)
+    multipart-post (2.0.0)
     parser (2.3.1.2)
       ast (~> 2.2)
     powerpack (0.1.1)
@@ -14,11 +29,16 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     unicode-display_width (1.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  faraday
+  http (< 2.0.0)
   json (~> 1.8.3)
   rubocop (~> 0.41.2)
