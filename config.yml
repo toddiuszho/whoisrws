@@ -1,0 +1,30 @@
+---
+# Connectivity
+es_host: dfweslog01.rack.viverae.technology
+es_port: 9200
+
+# Elasticsearch mappings
+es_index: f5request-*
+es_type: uris
+es_clientip_term: clientip
+es_xff_term: xff
+
+# Search ranges
+clientip_range: 4h
+xff_range: 7d
+
+# Exclusions
+clientip_exclusions:
+  - 216.136.60.22
+registry_name_exclusions:
+  - "American Registry for Internet Numbers"
+  - "Various Registries (Maintained by ARIN)"
+registry_name_aliases:
+  - canonical: Sprint
+    aliases:
+      - "Sprint PCS"
+
+# Caching
+ip_cache_duration_s: 3600
+
+# VHMS

@@ -1,0 +1,45 @@
+---
+model:
+  - ip: 0.0.0.0
+    names:
+      - name1
+      - name2
+    xffs:
+      - ip: 0.0.0.1
+        names:
+          - name3
+          - name4
+  - ip: 0.0.0.2
+    names:
+      - name5
+      - name6
+    xffs:
+      - ip: 0.0.0.3
+        names:
+          - name7
+          - name8
+      - ip: 0.0.0.4
+        names:
+          - name9
+          - name10
+  - ip: 0.0.0.5
+    names:
+      - name11
+
+
+view:
+  - ip: 0.0.0.0
+    names:
+      - name1
+      - name2
+    possible_customers:
+      - customer_name1
+      - customer_name2
+    proxies:
+      - canonical: name3
+        ips:
+          - 0.0.0.1
+          - 0.0.0.2
+        names:
+          - name3
+          - name4
