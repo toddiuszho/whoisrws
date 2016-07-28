@@ -1,0 +1,45 @@
+POST f5request-*/uris/_search
+{
+    "size": 0,
+    "aggs": {
+        "filtered": {
+            "filter": {
+                "and": [
+                    { "not": { "term": { "clientip": "216.136.60.22" } } },
+                    { "range": { "@timestamp": { "gt": "now-24h", "lte": "now" } } }
+                ]
+            },
+            "aggs": {
+                "clientip": {
+                    "terms": {
+                        "field": "clientip",
+                        "size": 20
+                    }
+                }
+            }
+        }
+    }
+}
+
+POST f5request-*/uris/_search
+{
+    "size": 0,
+    "aggs": {
+        "filtered": {
+            "filter": {
+                "and": [
+                    { "term": { "clientip": "73.31.194.75" } },
+                    { "range": { "@timestamp": { "gt": "now-70d", "lte": "now" } } }
+                ]
+            },
+            "aggs": {
+                "xff": {
+                    "terms": {
+                        "field": "xff",
+                        "size": 20
+                    }
+                }
+            }
+        }
+    }
+}

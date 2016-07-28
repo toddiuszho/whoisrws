@@ -2,6 +2,7 @@
 # Connectivity
 es_host: dfweslog01.rack.viverae.technology
 es_port: 9200
+es_ssl: false
 
 # Elasticsearch mappings
 es_index: f5request-*
@@ -9,9 +10,11 @@ es_type: uris
 es_clientip_term: clientip
 es_xff_term: xff
 
-# Search ranges
+# Search bounds
 clientip_range: 4h
+clientip_top: 20
 xff_range: 7d
+xff_top: 20
 
 # Exclusions
 clientip_exclusions:
@@ -26,5 +29,3 @@ registry_name_aliases:
 
 # Caching
 ip_cache_duration_s: 3600
-
-# VHMS
